@@ -3,11 +3,50 @@
 <head>
     <title>The Figurines Store</title>
     <link rel="stylesheet" href="style.css">   
+	<style>
+			h1 {
+			text-shadow: 1px 5px #000000;
+			}
+
+			*{
+				box-sizing: border-box;
+				}
+				
+				.column {
+				float: left;
+				width: 33.33%;
+				  padding: 5px;
+				}
+
+				/* Clearfix (clear floats) */
+				.row::after {
+				content: "";
+				clear: both;
+				display: table;
+				}
+		.gfg { 
+                width:auto; 
+                text-align:center; 
+                padding:20px; 
+            } 
+            img { 
+                width: 20%; 
+                height: 20%; 
+                object-fit: contain; 
+            } 
+			
+			}
+			
+        </style>  
 </head>
+
 <body>
 
-    <h1>The Figurines</h1>
-
+    <h1><p><font color="white" style="font-size:70px; margin-bottom:4px">The Fingurines</font></p></h1>
+	
+	<body style="background:url(images/8.jpg); background-repeat:no-repeat; background-size: 100% 100%">
+	
+	
     <form class="searchbar" method="get" action="query">
         <input type="text" name="name"/>
         <!-- <select name="artist" size ="1">
@@ -25,15 +64,133 @@
         <input type="submit" value="Search" />
      </form>
 
-     <li>
+     <!--<li>
          <ul>
-            <a href="productpage.html"><img src="images/2.png" alt=""></a>
+            <a href="productpage.html"><img src="images/1.jpg" alt=""></a>
+            <p>Name</p>
+            <p>Scale</p>
+            <p>Artist</p>
+            <p>Price</p> 
+			<br>
+			
+			<a href="productpage.html"><img src="images/2.jpg" alt=""></a>
             <p>Name</p>
             <p>Scale</p>
             <p>Artist</p>
             <p>Price</p>            
         </ul>
-     </li>
+     </li> -->
+	 
+		<div class="row">
+		  <div class="column">
+			
+			<a href="productpage.html"><img src="images/1.jpg" alt="" style ="width:100%"></a>
+            <font color='white'>
+			<p><b><u><font size = 5px>Captain Marvel</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: JC Hong, So Young Lee</p>
+            
+			<br>
+		  </div>
+		  <div class="column">
+			<a href="productpage.html"><img src="images/2.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>HulkBuster</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: Jae Sung Eom, JC Hong</p>
+             
+			<br>
+		  </div>
+		  <div class="column">
+			<a href="productpage.html"><img src="images/3.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Thanos</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: JC Hong, E Lee</p>
+            
+			<br>
+		  </div>
+		  <div class="column">
+			<a href="productpage.html"><img src="images/4.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Iron Man</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: Lok Ho, JC Hong</p>
+             
+			<br>
+		  </div>	  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/5.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Thor</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: Jae Sung Eom, So Young Lee</p>
+            
+			<br>
+		  </div>
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/9.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Captain America</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: JC Hong</p>
+            
+			<br>
+		  </div>
+		
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/10.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Hulk</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: So Young Lee</p>
+            
+			<br>
+		  </div>
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/11.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Spider Man</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: JC Hong, E Lee</p>
+            
+			<br>
+		  </div>
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/12.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Loki</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: Lok Ho, JC Hong </p>
+            
+			<br>
+		  </div>
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/13.jpg" alt="" style ="width:100%"></a>
+            <p><b><u>Iron Monger</u></b></p>
+            <p>1/6 Scale</p>
+            <p>Artist: Lok Ho </p>
+            
+			<br>
+		  </div>
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/14.jpg" alt="" style ="width:98%"></a>
+            <p><b><u>Storm</u></b></p>
+            <p>1/4 Scale</p>
+            <p>Artist: Hernan Azcarate</p>
+            
+			<br>
+		  </div>
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/15.jpg" alt="" style ="width:98%"></a>
+            <p><b><u>Doc Oct</u></b></p>
+            <p>1/4 Scale</p>
+            <p>Artist: Victor Hugo Sousa</p>
+           
+			<br>
+		  </div>
+		  
+		  
+		</div>
 
 </body>
 </html>

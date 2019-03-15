@@ -2,18 +2,96 @@
 <html>
 <head>
     <title>Product Details</title>
-    <link rel="stylesheet" href="style.css">   
+    <link rel="stylesheet" href="style.css"> 
+<style>
+			h1 {
+			text-shadow: 1px 5px #000000;
+			}
+			
+			*{
+				box-sizing: border-box;
+				}
+				
+				.column {
+				float: left;
+				width: 33.33%;
+				  padding: 5px;
+				}
+
+				/* Clearfix (clear floats) */
+				.row::after {
+				content: "";
+				clear: both;
+				display: table;
+				}
+		.gfg { 
+                width:auto; 
+                text-align:center; 
+                padding:20px; 
+            } 
+            img { 
+                width: 20%; 
+                height: 20%; 
+                object-fit: contain; 
+            } 
+			
+			}
+</style>			
+	
+	
 </head>
 <body>
 
-    <a href="shop.html"><h1>The Figurines</h1></a>
+   
+	 <a href="shop.html"><h1><p><font color="white" style="font-size:70px; margin-bottom:4px">The Fingurines</font></p></h1></a>
+	
+	<body style="background:url(images/8.jpg); background-repeat:no-repeat; background-size: 100% 100%">
+	
+	
+<!--<center>
+	<div>
+	<img src = "images/2.jpg" height="600" width="400" style = "float: left"  />
+	<!--<p><img src="images/2.jpg" height="600" width="400" border="1px" style="float: left; padding: 2px; margin-right: 10px"></p>
+	<br>
+	</div>
+	</center>-->
+	
 
-    <img src="images/2.png" alt="">
+	
+	<div class="row">
+		  <div class="column">
+			
+			<a href="productpage.html"><img src="images/2.jpg" alt="" style ="width:100%"></a>
+            <font color='white'>
+			<br>
+		  </div>
+	
+		  
+		  <div class="column">
+			<a href="productpage.html"><img src="images/2.1.jpg" alt="" style ="width:100%"></a>
+             
+			<br>
+		  </div>
+		  
+		  <right>
+				<p class="name"> Name</p>
+				<p> Scale</p>
+				<p> Artist</p>
+				<p> Price</p>            
+				<button>Order Now</button>
+		  </right>
+		  
+	
+	
+    <!--<img src="images/2.jpg" alt=""; style ="width:50%">
     <p class="name">Name</p>
     <p>Scale</p>
     <p>Artist</p>
     <p>Price</p>            
     <button>Order Now</button>
+	<br>-->
+
+    
 
 </body>
 </html>
