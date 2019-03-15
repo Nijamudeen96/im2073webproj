@@ -1,5 +1,10 @@
 h1{
-    color: brown;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+h2{
+    color:grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
 }
 
