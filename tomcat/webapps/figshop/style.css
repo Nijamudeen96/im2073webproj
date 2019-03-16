@@ -1,11 +1,39 @@
-h1{
-    color: white;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-	
-	}
+h1 {
+    text-shadow: 1px 5px #000000;
+    }
 
 h2{
     color:grey;
     font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+
+
+*{
+    box-sizing: border-box;
+}
+        
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+ /* Clearfix (clear floats) */
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.gfg { 
+    width:auto; 
+    text-align:center; 
+    padding:20px; 
+} 
+
+img { 
+    width: 20%; 
+    height: 20%; 
+    object-fit: contain; 
+} 
 
