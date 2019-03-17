@@ -33,36 +33,22 @@ public class Query extends HttpServlet {  // JDK 6 and above only
                + " AND quantity > 0 ORDER BY name ASC";
  
          // Print an HTML page as output of query
-         // out.println("<html><head><title>Query Results</title>");
-         // out.println("<link rel='stylesheet' href='style.css'/>");
-         // out.println("</head>");
-         // out.println("<body>");
-         // out.println("<h2>Thanks you for your query.</h2>");
-         // out.println("<p>You query is: " + sqlStr + "</p>"); // Echo for debugging
          ResultSet rset = stmt.executeQuery(sqlStr); // Send the query to the server
- 
-         // // Step 4: Process the query result
-         // int count = 0;
-         // while(rset.next()) {
-         //    // Print a paragraph <p>...</p> for each row
-         //     out.println("<p>" + rset.getString("name")
-         //           + ", " + rset.getString("code")
-         //           + ", $" + rset.getFloat("price") + "</p>");
-         //     ++count;
-         // }
-         // out.println("<p>==== "+ count +"records found ====</p>");
-         //  out.println("</body></html>");
 
+         // // Step 4: Process the query result
          out.println("<html>");
          out.println("<head>");
          out.println("<title>The Figurines Store</title>");
          out.println("<link rel='stylesheet' href='style.css'/>");   
          out.println("</head>");
-         out.println("<body>");
+         out.println("<body class='product-page-main'>");
 
-         out.println("<h1>The Figurines</h1>");
+         out.println("<h1 class='head-text'>The Figurines</h1>");
 
-         out.println("<form class='searchbar' method='get' action='query'><input type='text' name='name'/><input type='submit' value='Search' /></form>");
+         out.println("<form class='searchbar' method='get' action='query'><input type='text' name='name'/>");
+         out.println("<select name='artist' size ='1'>");
+         out.println("</select>");
+         out.println("<input type='submit' value='Search' /></form>");
 
          out.println("<li>");
          int count = 0;
