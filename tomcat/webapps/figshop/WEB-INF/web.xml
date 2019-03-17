@@ -10,6 +10,11 @@
       <servlet-name>Query</servlet-name>
       <servlet-class>Query</servlet-class>
    </servlet>
+
+   <servlet>
+      <servlet-name>Product</servlet-name>
+      <servlet-class>Product</servlet-class>
+   </servlet>
  
  
    <!-- Note: All <servlet> elements MUST be grouped together and
@@ -18,6 +23,11 @@
    <servlet-mapping>
       <servlet-name>Query</servlet-name>
       <url-pattern>/query</url-pattern>
+   </servlet-mapping>
+ 
+   <servlet-mapping>
+      <servlet-name>Product</servlet-name>
+      <url-pattern>/product</url-pattern>
    </servlet-mapping>
  
 </web-app>

@@ -4,7 +4,7 @@ import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
  
-public class Query extends HttpServlet {  // JDK 6 and above only
+public class Product extends HttpServlet {  // JDK 6 and above only
  
    // The doGet() runs once per HTTP GET request to this servlet.
    @Override
@@ -28,8 +28,8 @@ public class Query extends HttpServlet {  // JDK 6 and above only
          stmt = conn.createStatement();
  
          // Step 3: Execute a SQL SELECT query
-         String sqlStr = "SELECT * FROM figures WHERE name like "
-               + "'%" + request.getParameter("name") + "%'"
+         String sqlStr = "SELECT * FROM figures WHERE code like "
+               + "'%" + request.getParameter("code") + "%'"
                + " AND quantity > 0 ORDER BY name ASC";
  
          // Print an HTML page as output of query
@@ -54,15 +54,13 @@ public class Query extends HttpServlet {  // JDK 6 and above only
          out.println(" <input type='submit' value='Search' /></form></div>");
          out.println("<div class='row'>");
 
-         while(rset.next()){
-            out.println("<div class='column'>");
-            out.println("<img src='images/1.jpg' alt='' style ='width:100%'>");
-            out.println("<p>Name: "+rset.getString("name")+"</p>");
-            out.println("<p>Scale: 1/"+rset.getInt("scale")+"</p>");
-            out.println("<p>Artist: JC Hong, So Young Lee</p>");
-            out.println("<form method='get' action='product'>");
-            out.println("<button name='code' type='submit' value='"+rset.getInt("code")+"'>More Info</button></form>><br></div>");
-         } 
+         out.println("<div class='column'>");
+        out.println("<img src='images/1.jpg' alt='' style ='width:100%'>");
+        out.println("<p>Name: "+rset.getString("name")+"</p>");
+        out.println("<p>Scale: 1/"+rset.getInt("scale")+"</p>");
+        out.println("<p>Artist: JC Hong, So Young Lee</p>");
+        out.println("<form method='get' action='product'>");
+        out.println("<button name='code' type='submit' value='"+rset.getString("code")+"'>More Info</button></form>><br></div>"); 
 
          out.println("</div></body></html>");
 
