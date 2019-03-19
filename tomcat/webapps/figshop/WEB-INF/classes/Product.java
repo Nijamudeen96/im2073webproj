@@ -28,45 +28,36 @@ public class Product extends HttpServlet {  // JDK 6 and above only
          stmt = conn.createStatement();
  
          // Step 3: Execute a SQL SELECT query
-         String sqlStr = "SELECT * FROM figures WHERE code like "
-               + "'%" + request.getParameter("code") + "%'"
+         String sqlStr = "SELECT * FROM figures WHERE code = "
+               + request.getParameter("code")
                + " AND quantity > 0 ORDER BY name ASC";
  
          // Print an HTML page as output of query
          ResultSet rset = stmt.executeQuery(sqlStr); // Send the query to the server
 
          // Step 4: Process the query result
-
-         out.println("<html><head><title>The Figurines Store</title><link rel='stylesheet' href='style.css'></head>");
-         out.println("<body class='product-page-main'>");
-         out.println("<h1 class='head-text'>The Fingurines</h1>");
-         out.println("<div class='search-bar'>");
-         out.println("<form class='searchbar' method='get' action='query'>");
-         out.println("<input type='text' name='name'/>");
-         out.println("<select name='artist' size ='1'>");
-         out.println("<option value='Jae Sung Eom'>Jae Sung Eom</option>");
-         out.println("<option value='JC Hong'>JC Hong</option>");
-         out.println("<option value='Lok Ho'>Lok Ho</option>");
-         out.println("<option value='Hernan Azcarate'>Hernan Azcarate  </option>");
-         out.println("<option value='Victor Hugo Sousa'>Victor Hugo Sousa</option>");
-         out.println(" </select>");
-         out.println("<select name='scale' size ='1'><option value='6'>1/6</option><option value='4'>1/4</option></select>");
-         out.println(" <input type='submit' value='Search' /></form></div>");
-         out.println("<div class='row'>");
-
+         System.out.println(sqlStr);
+         out.println("<html><head>");
+         out.println("<title>Product Details</title>");
+         out.println("<link href= 'https://fonts.googleapis.com/css?family=Anton|Montserrat ' rel= 'stylesheet '>");
+         out.println("<link rel='stylesheet' href='style.css'> ");
+         out.println("</head><body class='product-page-main'>");
+         out.println("<a href='shop.html'><h1 class='head-text'><a href='shop.html'>The Figurines</a><h1></a>");
          while(rset.next()){
-            out.println("<div class='column'>");
-            out.println("<img src='images/1.jpg' alt=''>");
-            out.println("<p>Name: "+rset.getString("name")+"</p>");
-            out.println("<p>Scale: 1/"+rset.getInt("scale")+"</p>");
-            //out.println("<p>Artist: "+rset.getString("artist")+"</p>");
+            out.println("<div class='order-image'>");
+            out.println("<img class='order-image-pic' src='images/"+rset.getInt("image")+".jpg' alt=''></div>");
+            out.println("<div class='order-non-image'>");
+            out.println("<div class='order-details'>");
+            out.println("<p class='od-name'>"+rset.getString("name")+" (1/"+rset.getInt("scale")+")</p>");
+            out.println("<p class='od-artist'>By "+rset.getString("artist")+"</p>");
+            out.println("<p class='od-price'>S$"+rset.getInt("price")+".00</p></div>");
+            
+            out.println("<div class='order-submission'>");
             out.println("<form method='get' action='buy'>");
-            out.println("<input type='text' name='name'/>");
-            out.println("<input type='text' name='email'/>");
-            out.println("<button name='code' type='submit' value='"+rset.getInt("code")+"'>Buy Now</button></form>><br></div>"); 
-         } 
-         out.println("</div></body></html>");
-
+            out.println("<input class='os-name'type='text' name='name' placeholder='Enter Name Here'/>");
+            out.println("<br><input class='os-email'type='text' name='email' placeholder='Enter Email Address'/>");
+            out.println("<br><button class='os-btn'name='code' type='submit' value='"+rset.getInt("code")+"'>BUY NOW</button></form></div></div></body></html>");
+         }
 
       } catch (SQLException ex) {
          ex.printStackTrace();

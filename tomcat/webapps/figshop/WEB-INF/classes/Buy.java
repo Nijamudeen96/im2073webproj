@@ -27,36 +27,38 @@ public class Buy extends HttpServlet {  // JDK 6 and above only
          // Step 2: Create a "Statement" object inside the "Connection"
          stmt = conn.createStatement();
  
-         // Step 3: Execute a SQL SELECT query
+         // // Step 3: Execute a SQL SELECT query
+         // String sqlStr = "SELECT * FROM figures WHERE code = "
+         //       + request.getParameter("code")
+         //       + " AND quantity > 0 ORDER BY name ASC";
+ 
+         // Print an HTML page as output of query
          String[] code = request.getParameterValues("code");
          String[] name = request.getParameterValues("name");
          String[] email = request.getParameterValues("email");
- 
-        if(code != null){
+         if(code != null){
             String sqlStr;
             int count;
-            int i = 0;
 
-            sqlStr = "update figures set quantity = quantity - 1 where code =" + code[i];
-            count = stmt.executeUpdate(sqlStr);
+            for(int i = 0; i<code.length; ++i){
+               sqlStr = "UPDATE figures SET quantity = quantity - 1 WHERE code = " + code[i];
+               count = stmt.executeUpdate(sqlStr);
 
-            sqlStr = "insert into order_records values("+code[i]+", 1, ''"+name[i]+"'',''"+email[i]+"'')";
-            count = stmt.executeUpdate(sqlStr);
-        }
-    
+               sqlStr = "INSERT INTO order_records (code, quantity, name, email) VALUES ("
+               + code[i] + ", 1, '"+name[i]+"', '"+email[i]+"')";
+               count = stmt.executeUpdate(sqlStr);
 
-         // Print an HTML page as output of query
-         //ResultSet rset = stmt.executeQuery(    sqlStr); // Send the query to the server
-
-         // Step 4: Process the query result
-
-         out.println("<html><head><title>The Figurines Store</title><link rel='stylesheet' href='style.css'></head>");
-         out.println("<body class='product-page-main'>");
-         out.println("<h1 class='head-text'>The Fingurines</h1>");
-         out.println("<p class ='success-page'>YOUR ORDER HAS BEEN PLACED SUCCESSFULLY</p>");
-         out.println("<button class='front-page-btn'><a href='shop.html'>Continue Shopping</a></button>");
-         out.println("</body></html>");
-
+               out.println("<html><head>");
+               out.println("<title>Order Succesful</title>");
+               out.println("<link href= 'https://fonts.googleapis.com/css?family=Anton|Montserrat ' rel= 'stylesheet '>");
+               out.println("<link rel='stylesheet' href='style.css'></head><body class='confirm-page-main'>");
+               out.println("<div class='container'><p class='cfm-text-1'>Your order has been confirmed</p>");
+               out.println("<p class='cfm-text-2'>Thank you for shopping with THE FIGURINES</p>");
+               out.println("<button class='cfm-page-btn'><a href='shop.html'>CONTINUE SHOPPING</a></button></div></body></html>");
+               
+            }
+            
+         }
 
       } catch (SQLException ex) {
          ex.printStackTrace();

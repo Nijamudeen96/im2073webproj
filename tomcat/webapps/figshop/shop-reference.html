@@ -1,35 +1,51 @@
-<html><head><title>The Figurines Store</title><link rel='stylesheet' href='style.css'></head>
+<html><head>
+<title>The Figurines Store</title>
+<link href= 'https://fonts.googleapis.com/css?family=Anton|Montserrat ' rel= 'stylesheet '>
+<link rel='stylesheet' href='style.css'></head>
 
-<body class='product-page-main'>
-
-    <h1 class='head-text'>The Fingurines</h1>
+<body class='product-page-main'><h1 class='head-text'>The Fingurines</h1>
 	
-    <div class='search-bar'>
-      <form class='searchbar' method='get' action='query'>
-          <input type='text' name='name' value = 'hot'/>
-          <select name='artist' size ='1'>
-              <option value='Jae Sung Eom'>Jae Sung Eom</option>
-              <option value='JC Hong'>JC Hong</option>
-              <option value='Lok Ho'>Lok Ho</option>
-              <option value='Hernan Azcarate'>Hernan Azcarate  </option>
-              <option value='Victor Hugo Sousa'>Victor Hugo Sousa</option>
-          </select>
+<div class='search-bar'>
+<form class='searchbar' method='get' action='query'>
+<input class='name-search' type='text' name='name'/>
+<select class='artist-search' name='artist' size ='1'>
+<option value='Jae Sung Eom'>Jae Sung Eom</option>
+<option value='JC Hong'>JC Hong</option>
+<option value='Lok Ho'>Lok Ho</option>
+<option value='Hernan Azcarate'>Hernan Azcarate  </option>
+<option value='Victor Hugo Sousa'>Victor Hugo Sousa</option></select>
 
-          <select name='scale' size ='1'>
-              <option value='6'>1/6</option>
-              <option value='4'>1/4</option>
-          </select>
+<select class='scale-search' name='scale' size ='1'>
+<option value='6'>1/6</option>
+<option value='4'>1/4</option></select>
 
-          <input type='submit' value='Search' /></form></div>
+<input class='submit-search' type='submit' value='SEARCH' /></form></div >
 
-    <div class='row'><div class='column'>
+<div class='row'>
 			
-			<a href='productpage.html'><img src='images/1.jpg' alt='' style ='width:100%'></a>
-			<p>Captain Marvel</p>
-      <p>1/6 Scale</p>
-      <p>Artist: JC Hong, So Young Lee</p>
-      <form class='more-info' method='get' action='query'>
-      <input type='submit' name ='Captain Marvel' value='More Info'>  </form>><br></div>
-    </div></body></html>
-    
-  
+<div class='column'>
+<img class ='std-image-2' src='images/1.jpg' alt=''>
+<div class='product-brief'>
+<p class='product-brief-name'>Captain Marvel</p>
+<p class='product-brief-price'>S$xxx.xx</p>
+</div>
+<div class='more-info'>
+<form method='get' action='product'>
+<button class='more-info-btn' name='code' type='submit' value=''>More Info</button>
+</form></div><br></div>
+
+<div class='column'>
+    <img class ='std-image' src='images/1.jpg' alt='' >
+    <div class='product-brief'>
+        <p class='product-brief-name'>Hot Toys Captain Marvel</p>
+        <p class='product-brief-price'>S$315.00</p>
+    </div>
+    <div class='more-info'>
+        <form method='get' action='product'>
+        <button class='more-info-btn' name='code' type='submit' value='512'>More Info</button>
+        </form>
+      </div>       
+  <br>
+  </div>
+
+</div></body></html>
