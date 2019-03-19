@@ -103,3 +103,11 @@
 17-Mar-2019 15:11:10.644 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/figshop] has started
 17-Mar-2019 15:11:11.220 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
 17-Mar-2019 15:11:11.224 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/figshop] is completed
+17-Mar-2019 15:34:14.534 INFO [Thread-4] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-9999"]
+17-Mar-2019 15:34:14.632 INFO [Thread-4] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+17-Mar-2019 15:34:14.958 INFO [Thread-4] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+17-Mar-2019 15:34:15.000 INFO [Thread-4] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-9999"]
+17-Mar-2019 15:34:15.006 INFO [Thread-4] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+17-Mar-2019 15:34:15.011 INFO [Thread-4] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-9999"]
+17-Mar-2019 15:34:15.013 INFO [Thread-4] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+17-Mar-2019 15:34:40.102 SEVERE [main] org.apache.catalina.startup.Catalina.stopServer Could not contact [localhost:8005] (base port [8005] and offset [0]). Tomcat may not be running.

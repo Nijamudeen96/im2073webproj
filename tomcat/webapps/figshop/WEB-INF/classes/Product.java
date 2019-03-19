@@ -54,14 +54,17 @@ public class Product extends HttpServlet {  // JDK 6 and above only
          out.println(" <input type='submit' value='Search' /></form></div>");
          out.println("<div class='row'>");
 
-         out.println("<div class='column'>");
-        out.println("<img src='images/1.jpg' alt='' style ='width:100%'>");
-        out.println("<p>Name: "+rset.getString("name")+"</p>");
-        out.println("<p>Scale: 1/"+rset.getInt("scale")+"</p>");
-        out.println("<p>Artist: JC Hong, So Young Lee</p>");
-        out.println("<form method='get' action='product'>");
-        out.println("<button name='code' type='submit' value='"+rset.getString("code")+"'>More Info</button></form>><br></div>"); 
-
+         while(rset.next()){
+            out.println("<div class='column'>");
+            out.println("<img src='images/1.jpg' alt=''>");
+            out.println("<p>Name: "+rset.getString("name")+"</p>");
+            out.println("<p>Scale: 1/"+rset.getInt("scale")+"</p>");
+            //out.println("<p>Artist: "+rset.getString("artist")+"</p>");
+            out.println("<form method='get' action='buy'>");
+            out.println("<input type='text' name='name'/>");
+            out.println("<input type='text' name='email'/>");
+            out.println("<button name='code' type='submit' value='"+rset.getInt("code")+"'>Buy Now</button></form>><br></div>"); 
+         } 
          out.println("</div></body></html>");
 
 

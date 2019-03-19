@@ -1,0 +1,100 @@
+/*  -----   UNIVERSAL ADJUSTMENTS   -----   */
+
+h1 {
+    text-shadow: 1px 5px #000000;
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+a:visited{
+    color: black; 
+}
+
+p {
+    color: black;
+}
+
+/*   -----   FRONT PAGE ADJUSTMENT  -----   */
+
+.front-page-main {
+    background:url(images/16.jpg); 
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+
+.front-page{
+    color: aliceblue;
+    font-size:150px; 
+    margin-bottom:0px;
+    text-align: center;
+}
+
+.front-page-btn{
+    position: absolute;
+    left: 48%;
+    top: 55%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+}
+
+.front-page-btn:hover{
+    background-color: brown;
+}
+
+/*  -----   SHOP AND ORDER ADJUSTMENTS  -----   */
+
+.product-page-main{
+    background:url(images/8.jpg); 
+    background-repeat:no-repeat; 
+    background-size: 100% 100%
+}
+
+.head-text{
+    color:white;
+    font-size:70px; 
+    margin-bottom:4px;
+}
+
+*{
+    box-sizing: border-box;
+}
+        
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+ /* Clearfix (clear floats) */
+.row::after {
+content: "";
+clear: both;
+display: table;
+}
+
+.gfg { 
+    width:auto; 
+    text-align:center; 
+    padding:20px; 
+} 
+
+img { 
+    width: 20%; 
+    height: 20%; 
+    object-fit: contain; 
+} 
+
+.text-body{
+    font-weight: 200;
+    font-size: 24px;
+    font-family: Helvetica, sans-serif;
+    text-shadow: none;
+}
+
+.name{
+    font-weight: 700;
+}
+

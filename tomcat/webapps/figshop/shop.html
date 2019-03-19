@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>The Figurines Store</title>
+    <link href= 'https://fonts.googleapis.com/css?family=Anton|Montserrat ' rel= 'stylesheet '>
     <link rel='stylesheet' href='style.css'>   
 </head>
 
@@ -11,8 +12,8 @@
 	
     <div class='search-bar'>
       <form class='searchbar' method='get' action='query'>
-          <input type='text' name='name'/>
-          <select name='artist' size ='1'>
+          <input class='name-search' type='text' name='name'/>
+          <select class='artist-search' name='artist' size ='1'>
               <option value='Jae Sung Eom'>Jae Sung Eom</option>
               <option value='JC Hong'>JC Hong</option>
               <option value='Lok Ho'>Lok Ho</option>
@@ -20,53 +21,67 @@
               <option value='Victor Hugo Sousa'>Victor Hugo Sousa</option>
           </select>
 
-          <select name='scale' size ='1'>
+          <select class='scale-search' name='scale' size ='1'>
               <option value='6'>1/6</option>
               <option value='4'>1/4</option>
           </select>
 
-          <input type='submit' value='Search' />
+          <input class='submit-search' type='submit' value='SEARCH' />
       </form>
-  </div>
+  </div >
 
-    <div class='row'>
+    <div class='row'>			
+        <div class='column'>
+          <a href='productpage.html'><img class ='std-image' src='images/1.jpg' alt='' ></a>
+          <div class='product-brief'>
+              <p class='product-brief-name'>Captain Marvel</p>
+              <p class='product-brief-price'>S$xxx.xx</p>
+          </div>
+          <div class='more-info'>
+              <form method='get' action='product'>
+              <button class='more-info-btn' name='code' type='submit' value=''>More Info</button>
+              </form>
+            </div>       
+        <br>
+        </div>
+
 		  <div class='column'>
-			
-			<a method='get' action='product'><img src='images/1.jpg' alt='' style ='width:100%'></a>
-            <font-color='white'>
-			<p><b><u><font-size = 5px>Captain Marvel</u></b></p>
-            <p>1/6 Scale</p>
-            <p>Artist: JC Hong, So Young Lee</p>
-            
-			<br>
-		  </div>
-		  <div class='column'>
-			<a href='productpage.html'><img src='images/2.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>HulkBuster</u></b></p>
-            <p>1/6 Scale</p>
-            <p>Artist: Jae Sung Eom, JC Hong</p>
+			<a href='productpage.html'><img class ='std-image'src='images/2.jpg' alt='' ></a>
+          <div class='product-brief'>     
+            <p class='product-brief-name'>HulkBuster</p>
+            <p class='product-brief-price'>S$999.00</p>
+          </div>  
+          <div class='more-info'>
+            <form method='get' action='product'>
+            <button class='more-info-btn' name='code' type='submit' value=''>More Info</button>
+            </form>
+          </div>
              
-			<br>
-		  </div>
+			  <br>
+       </div>
+       
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/3.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Thanos</u></b></p>
+			<a href='productpage.html'><img class ='std-image' src='images/3.jpg' alt=''></a>
+            <p>Thanos</p>
             <p>1/6 Scale</p>
             <p>Artist: JC Hong, E Lee</p>
+            <form method='get' action='product'>
+              <button name='code' type='submit' value=''>More Info</button>
+              </form>
             
 			<br>
 		  </div>
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/4.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Iron Man</u></b></p>
+			<a href='productpage.html'><img src='images/4.jpg' alt=''></a>
+            <p>Iron Man</p>
             <p>1/6 Scale</p>
             <p>Artist: Lok Ho, JC Hong</p>
              
 			<br>
 		  </div>	  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/5.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Thor</u></b></p>
+			<a href='productpage.html'><img src='images/5.jpg' alt=''></a>
+            <p> Thor </p>
             <p>1/6 Scale</p>
             <p>Artist: Jae Sung Eom, So Young Lee</p>
             
@@ -74,8 +89,8 @@
 		  </div>
 		  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/9.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Captain America</u></b></p>
+			<a href='productpage.html'><img src='images/9.jpg' alt=''></a>
+            <p> Captain America </p>
             <p>1/6 Scale</p>
             <p>Artist: JC Hong</p>
             
@@ -84,8 +99,8 @@
 		
 		  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/10.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Hulk</u></b></p>
+			<a href='productpage.html'><img src='images/10.jpg' alt=''></a>
+            <p>Hulk</p>
             <p>1/6 Scale</p>
             <p>Artist: So Young Lee</p>
             
@@ -93,8 +108,8 @@
 		  </div>
 		  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/11.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Spider Man</u></b></p>
+			<a href='productpage.html'><img src='images/11.jpg' alt=''></a>
+            <p>Spider Man </p>
             <p>1/6 Scale</p>
             <p>Artist: JC Hong, E Lee</p>
             
@@ -102,8 +117,8 @@
 		  </div>
 		  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/12.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Loki</u></b></p>
+			<a href='productpage.html'><img src='images/12.jpg' alt=''></a>
+            <p> Loki </p>
             <p>1/6 Scale</p>
             <p>Artist: Lok Ho, JC Hong </p>
             
@@ -111,8 +126,8 @@
 		  </div>
 		  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/13.jpg' alt='' style ='width:100%'></a>
-            <p><b><u>Iron Monger</u></b></p>
+			<a href='productpage.html'><img src='images/13.jpg' alt=''></a>
+            <p> Iron Monger </p>
             <p>1/6 Scale</p>
             <p>Artist: Lok Ho </p>
             
@@ -120,8 +135,8 @@
 		  </div>
 		  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/14.jpg' alt='' style ='width:98%'></a>
-            <p><b><u>Storm</u></b></p>
+			<a href='productpage.html'><img src='images/14.jpg' alt=''></a>
+            <p> Storm </p>
             <p>1/4 Scale</p>
             <p>Artist: Hernan Azcarate</p>
             
@@ -129,8 +144,8 @@
 		  </div>
 		  
 		  <div class='column'>
-			<a href='productpage.html'><img src='images/15.jpg' alt='' style ='width:98%'></a>
-            <p><b><u>Doc Oct</u></b></p>
+			<a href='productpage.html'><img src='images/15.jpg' alt=''></a>
+            <p> Doc Oct </p>
             <p>1/4 Scale</p>
             <p>Artist: Victor Hugo Sousa</p>
            

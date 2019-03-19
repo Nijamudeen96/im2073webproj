@@ -15,6 +15,11 @@
       <servlet-name>Product</servlet-name>
       <servlet-class>Product</servlet-class>
    </servlet>
+
+   <servlet>
+      <servlet-name>Buy</servlet-name>
+      <servlet-class>Buy</servlet-class>
+   </servlet>
  
  
    <!-- Note: All <servlet> elements MUST be grouped together and
@@ -28,6 +33,11 @@
    <servlet-mapping>
       <servlet-name>Product</servlet-name>
       <url-pattern>/product</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>Buy</servlet-name>
+      <url-pattern>/buy</url-pattern>
    </servlet-mapping>
  
 </web-app>

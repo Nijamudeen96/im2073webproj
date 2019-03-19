@@ -176,3 +176,4 @@
 0:0:0:0:0:0:0:1 - - [17/Mar/2019:15:11:10 +0800] "GET /figshop/shop.html HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [17/Mar/2019:15:11:11 +0800] "GET /figshop/query?name=&artist=Jae+Sung+Eom&scale=6 HTTP/1.1" 200 2787
 0:0:0:0:0:0:0:1 - - [17/Mar/2019:15:11:12 +0800] "GET /figshop/product?code=521 HTTP/1.1" 200 1077
+0:0:0:0:0:0:0:1 - - [17/Mar/2019:15:33:40 +0800] "GET /figshop/product?code=521 HTTP/1.1" 200 1077

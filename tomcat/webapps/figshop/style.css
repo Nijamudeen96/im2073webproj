@@ -1,100 +1,183 @@
-/*  -----   UNIVERSAL ADJUSTMENTS   -----   */
-
-h1 {
-    text-shadow: 1px 5px #000000;
+body, html{
+    margin:0;
+    color: black;
+    font-family: 'Anton', sans-serif;
 }
 
 a{
-    text-decoration:none;
+    text-decoration: none;
     color: black;
 }
 
-a:visited{
-    color: black; 
+img{
+    width: 100%;
 }
 
-p {
-    color: black;
+.std-image{
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
 }
 
-/*   -----   FRONT PAGE ADJUSTMENT  -----   */
-
-.front-page-main {
+.front-page-main{
     background:url(images/16.jpg); 
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: 100%; 
 }
 
 .front-page{
-    color: aliceblue;
-    font-size:150px; 
-    margin-bottom:0px;
     text-align: center;
+    font-size: 6rem;
+    color: white;
+    margin-top: 6%;    
 }
 
 .front-page-btn{
+    color: black;
     position: absolute;
-    left: 48%;
+    left: 44%;
     top: 55%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   
+    font-family: 'Anton', sans-serif;
+    background-color:white;
+    border: none;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 24px;
+    border-radius: 4px;
 }
 
 .front-page-btn:hover{
-    background-color: brown;
+    border: 2px solid  rgb(90, 90, 90);
+    padding: 18px 30px;
 }
 
-/*  -----   SHOP AND ORDER ADJUSTMENTS  -----   */
-
+/*  -----   shop.html   -----   */
 .product-page-main{
     background:url(images/8.jpg); 
     background-repeat:no-repeat; 
-    background-size: 100% 100%
+    background-size: 100% 100%;
 }
 
 .head-text{
-    color:white;
-    font-size:70px; 
-    margin-bottom:4px;
+    text-align: center;
+    font-size: 3rem;
 }
 
-*{
-    box-sizing: border-box;
+.search-bar{
+    float: none;
+    position: absolute;
+    left: 50%;  
+    transform: translate(-50%, -50%);
 }
-        
-.column {
+
+.name-search{
+    background-color: rgb(214, 214, 214);
+    padding:6px 10px;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.artist-search{
+    background-color: rgb(214, 214, 214);
+    padding:6px 10px;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.scale-search{
+    background-color: rgb(214, 214, 214);
+    padding:6px 10px;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.submit-search{
+    background-color: rgb(214, 214, 214);
+    padding:6px 10px;
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.row{
+    margin-top:8%;
+    margin-left: 10%;
+}
+
+.column{
     float: left;
-    width: 33.33%;
+    width: 29%;
     padding: 5px;
 }
 
- /* Clearfix (clear floats) */
 .row::after {
-content: "";
-clear: both;
-display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
-.gfg { 
-    width:auto; 
-    text-align:center; 
-    padding:20px; 
-} 
+.product-brief{
+    float:left;
+}
 
-img { 
-    width: 20%; 
-    height: 20%; 
-    object-fit: contain; 
-} 
+.more-info{
+    float:right;
+    margin-top:2%;
+    margin-right:4%;
+}
 
-.text-body{
-    font-weight: 200;
+.product-brief-name{
     font-size: 24px;
-    font-family: Helvetica, sans-serif;
-    text-shadow: none;
+    margin:0;
+    padding:0;
 }
 
-.name{
-    font-weight: 700;
+.product-brief-price{
+    font-family:'Montserrat', sans-serif;
+    font-size: 20px;
+    margin:0;
+    padding:0;
+    font-weight: 900;
 }
 
+.more-info-btn{
+    color: black;
+    font-family: 'Anton', sans-serif;
+    background-color:white;
+    border: none;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.more-info-btn:hover{
+    border: 2px solid  rgb(90, 90, 90);
+    padding: 8px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   REFERENCES   */
+<link href= 'https://fonts.googleapis.com/css?family=Anton|Montserrat ' rel= 'stylesheet '>
+font-family: 'Anton', sans-serif;
+font-family: 'Montserrat', sans-serif;

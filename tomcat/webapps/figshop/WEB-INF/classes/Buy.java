@@ -4,7 +4,7 @@ import java.sql.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
  
-public class Query extends HttpServlet {  // JDK 6 and above only
+public class Buy extends HttpServlet {  // JDK 6 and above only
  
    // The doGet() runs once per HTTP GET request to this servlet.
    @Override
@@ -28,43 +28,34 @@ public class Query extends HttpServlet {  // JDK 6 and above only
          stmt = conn.createStatement();
  
          // Step 3: Execute a SQL SELECT query
-         String sqlStr = "SELECT * FROM figures WHERE name like "
-               + "'%" + request.getParameter("name") + "%'"
-               + " AND quantity > 0 ORDER BY name ASC";
+         String[] code = request.getParameterValues("code");
+         String[] name = request.getParameterValues("name");
+         String[] email = request.getParameterValues("email");
  
+        if(code != null){
+            String sqlStr;
+            int count;
+            int i = 0;
+
+            sqlStr = "update figures set quantity = quantity - 1 where code =" + code[i];
+            count = stmt.executeUpdate(sqlStr);
+
+            sqlStr = "insert into order_records values("+code[i]+", 1, ''"+name[i]+"'',''"+email[i]+"'')";
+            count = stmt.executeUpdate(sqlStr);
+        }
+    
+
          // Print an HTML page as output of query
-         ResultSet rset = stmt.executeQuery(sqlStr); // Send the query to the server
+         //ResultSet rset = stmt.executeQuery(    sqlStr); // Send the query to the server
 
          // Step 4: Process the query result
 
          out.println("<html><head><title>The Figurines Store</title><link rel='stylesheet' href='style.css'></head>");
          out.println("<body class='product-page-main'>");
          out.println("<h1 class='head-text'>The Fingurines</h1>");
-         out.println("<div class='search-bar'>");
-         out.println("<form class='searchbar' method='get' action='query'>");
-         out.println("<input type='text' name='name'/>");
-         out.println("<select name='artist' size ='1'>");
-         out.println("<option value='Jae Sung Eom'>Jae Sung Eom</option>");
-         out.println("<option value='JC Hong'>JC Hong</option>");
-         out.println("<option value='Lok Ho'>Lok Ho</option>");
-         out.println("<option value='Hernan Azcarate'>Hernan Azcarate  </option>");
-         out.println("<option value='Victor Hugo Sousa'>Victor Hugo Sousa</option>");
-         out.println(" </select>");
-         out.println("<select name='scale' size ='1'><option value='6'>1/6</option><option value='4'>1/4</option></select>");
-         out.println(" <input type='submit' value='Search' /></form></div>");
-         out.println("<div class='row'>");
-
-         while(rset.next()){
-            out.println("<div class='column'>");
-            out.println("<img src='images/1.jpg' alt='' style ='width:100%'>");
-            out.println("<p>Name: "+rset.getString("name")+"</p>");
-            out.println("<p>Scale: 1/"+rset.getInt("scale")+"</p>");
-            out.println("<p>Artist: JC Hong, So Young Lee</p>");
-            out.println("<form method='get' action='product'>");
-            out.println("<button name='code' type='submit' value='"+rset.getInt("code")+"'>More Info</button></form><br></div>");
-         } 
-
-         out.println("</div></body></html>");
+         out.println("<p class ='success-page'>YOUR ORDER HAS BEEN PLACED SUCCESSFULLY</p>");
+         out.println("<button class='front-page-btn'><a href='shop.html'>Continue Shopping</a></button>");
+         out.println("</body></html>");
 
 
       } catch (SQLException ex) {
