@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.default{
+    background-color: #212121;
+}
+
+.title-head{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    padding-top: 30px;
+    color: white;
+}
+
+.subscript{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+#myChart{
+    margin: 15px;
+    padding-top: 50px;
+}
+
+.empty{
+    color:#212121;
+    color:#1565c0
+}

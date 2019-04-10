@@ -11,12 +11,32 @@
       <servlet-class>Select</servlet-class>
    </servlet>
 
+   <servlet>
+      <servlet-name>Display</servlet-name>
+      <servlet-class>Display</servlet-class>
+   </servlet>
+
+   <servlet>
+      <servlet-name>Question</servlet-name>
+      <servlet-class>Question</servlet-class>
+   </servlet>
+
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
  
    <servlet-mapping>
       <servlet-name>Select</servlet-name>
       <url-pattern>/select</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>Display</servlet-name>
+      <url-pattern>/display</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>Question</servlet-name>
+      <url-pattern>/question</url-pattern>
    </servlet-mapping>
  
 </web-app>
