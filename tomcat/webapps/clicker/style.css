@@ -4,6 +4,7 @@
     overflow-x: hidden;
 }
 
+
 .default{
     background-color: #212121;
 }
@@ -31,3 +32,53 @@
     color:#212121;
     color:#1565c0
 }
+
+.bg{
+    background-color: #212121;
+}
+
+.op{
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    padding-top: 30px;
+}
+.questions{
+    padding-left: 30%;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    padding-top: 30px;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.op1 {
+    float: left;
+    width: 50%;
+    padding-top: 5%;
+  }
+
+.btn{
+   padding: 6px 25px;
+   font-size: 3rem;
+   border-radius: 10px;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 900;
+  }
+
+ .btn-contain{
+     align-content: center;
+     padding-left: 41%;
+     padding-top: 5%;
+}
+
+.btn:hover{
+    color: #1565c0;
+}
+ 

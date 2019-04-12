@@ -28,8 +28,8 @@ public class Display extends HttpServlet {  // JDK 6 and above only
          stmt = conn.createStatement();
  
          // Print an HTML page as output of query
-         String[] questionNo = {"8"};
-         //String[] questionNo = request.getParameterValues("questionNo");
+         //String[] questionNo = {"8"};
+         String[] questionNo = request.getParameterValues("questionNo");
         //  String[] name = request.getParameterValues("name");
         //  String[] email = request.getParameterValues("email");
           if(questionNo != null){

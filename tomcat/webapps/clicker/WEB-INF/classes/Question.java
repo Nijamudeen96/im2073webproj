@@ -27,11 +27,11 @@ public class Question extends HttpServlet {  // JDK 6 and above only
          // Step 2: Create a "Statement" object inside the "Connection"
          stmt = conn.createStatement();
 
-         out.println("<html><head><title>Document</title>");
-         out.println("</head><body><p>Question: Whats your IQ?</p>");
-         out.println("<p>A: 20</p><p>B: 40</p><p>C: 60</p><p>D: 80</p>");
-         out.println("<form action='display' method='get'>");
-         out.println("<button name='questionNo' type='submit' value='8'>Results</button></form></body></html>");
+         out.println("<html><head><title>Document</title><link rel='stylesheet' href='style.css'></head><body class='bg'>");
+         out.println("<p class ='op'>Question: Whats your IQ?</p>");
+         out.println("<div class = 'questions'>");
+         out.println("<p class ='op1'>A: 20</p><p class ='op1'>B: 40</p><p class ='op1'>C: 60</p><p class ='op1'>D: 80</p>");
+         out.println("</div><form action='display' method='get'><div class='btn-contain'><button class = 'btn' name='questionNo' type='submit' value='8'>Results</button></div></form></body></html>");
          
  
         //  // Step 3: Execute a SQL SELECT query
