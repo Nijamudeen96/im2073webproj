@@ -33,22 +33,31 @@ public class Display extends HttpServlet {  // JDK 6 and above only
         //  String[] name = request.getParameterValues("name");
         //  String[] email = request.getParameterValues("email");
           if(questionNo != null){
-            String sqlStr;
+            String sqlStr, question_s;
             String [] choices = {"a", "b", "c", "d"};
             int count;
             ResultSet rset;
-            out.println("<html><head><title>Display</title><link rel='stylesheet' href='style.css'><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></head><body class='default'><h1 class='title-head'>MENTI<span class='subscript'>v2</span></h1>");
-            out.println("<canvas id='myChart' width='80' height='30'><p>fallback</p></canvas><script src='https://cdn.jsdelivr.net/npm/chart.js@2.8.0'></script><script>");
-            out.println("var ctx = document.getElementById('myChart').getContext('2d');");
-            out.println("var chart = new Chart(ctx, {type: 'bar',data: {labels: ['A', 'B', 'C', 'D'],datasets: [{");
+           
             
 
             for(int i = 0; i<questionNo.length; i++){
-                out.println("label: 'Question "+questionNo[i]+"',");
-                out.println("backgroundColor: 'rgb(21, 101, 192)',borderColor: 'rgb(21, 101, 192)',");
-                out.println("data: [");
+               sqlStr =  "SELECT * FROM qbank WHERE questionNo= '" + questionNo[i] +"'";
+               rset = stmt.executeQuery(sqlStr);
+               while(rset.next()){
+                  question_s = rset.getString("question");
+               
+                  out.println("<html><head><title>Display</title><link rel='stylesheet' href='style.css'><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></head><body class='default'><h1 class='title-head'>MENTI<span class='subscript'>v2</span></h1>");
+                  out.println("<div class = 'question-div'><p class='question'>"+ question_s +"</p></div>");
+                  out.println("<canvas id='myChart' width='80' height='30'><p>fallback</p></canvas><script src='https://cdn.jsdelivr.net/npm/chart.js@2.8.0'></script><script>");
+                  out.println("var ctx = document.getElementById('myChart').getContext('2d');");
+                  out.println("var chart = new Chart(ctx, {type: 'bar',data: {labels: ['A', 'B', 'C', 'D'],datasets: [{");
+                  out.println("label: 'Question "+questionNo[i]+"',");
+                  out.println("backgroundColor: 'rgb(21, 101, 192)',borderColor: 'rgb(21, 101, 192)',");
+                  out.println("data: [");
+               }
                 for(int j=0; j<choices.length; j++){
                     //out.println("<p>SELECT questionNo, count(*) FROM responses WHERE questionNo= '" + questionNo[i] + "' AND choice= '"+ choices[j] +"'</p>");
+                    
                     sqlStr =  "SELECT questionNo, count(*) FROM responses WHERE questionNo= '" + questionNo[i] + "' AND choice= '"+ choices[j] +"'";
                     rset = stmt.executeQuery(sqlStr);
                     if(j<choices.length-1){
@@ -60,10 +69,23 @@ public class Display extends HttpServlet {  // JDK 6 and above only
                            out.println(rset.getInt("count(*)"));
                         }
                     }
+                    
             }
             
+
             out.println("]}],borderWidth: 1},");
-            out.println("options: {legend:{display: false,},label: {display: false,},scales: {yAxes: [{ticks: {beginAtZero: true},gridLines: {display: false,},}],xAxes: [{gridLines: {display: false,}}],}}});</script></body></html>");
+            out.println("options: {legend:{display: false,},label: {display: false,},scales: {yAxes: [{ticks: {beginAtZero: true},gridLines: {display: false,},}],xAxes: [{gridLines: {display: false,}}],}}});</script><div class='comment-section'>");
+            
+            sqlStr =  "SELECT questionNo, comment FROM responses WHERE questionNo= '" + questionNo[i] + "' order by comment DESC";
+            rset = stmt.executeQuery(sqlStr);
+               
+            while(rset.next()){
+               if(!rset.getString("comment").contentEquals("null")){
+                  out.println("<div class = 'comment-div'><p class= 'comment'>"+rset.getString("comment")+"</p></div>");
+               }
+            }
+
+            out.println("</div></body></html>");
 
             }
             

@@ -26,13 +26,21 @@ public class Question extends HttpServlet {  // JDK 6 and above only
  
          // Step 2: Create a "Statement" object inside the "Connection"
          stmt = conn.createStatement();
+         
+         // Step 3: Execute a SQL SELECT query
+         String sqlStr = "Select * from qbank where questionNo =" + request.getParameter("questionNo");
 
-         out.println("<html><head><title>Document</title><link rel='stylesheet' href='style.css'></head><body class='bg'>");
-         out.println("<p class ='op'>Question: Whats your IQ?</p>");
+         // Print an HTML page as output of query
+         ResultSet rset = stmt.executeQuery(sqlStr); // Send the query to the server
+
+         while(rset.next()){
+         out.println("<html><head><title>Document</title><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'><link rel='stylesheet' href='style.css'></head><body class='bg'><h1 class='title-head'><a href='index.html'>MENTI<span class='subscript'>v2</span></a><h1>");
+         out.println("<p class ='op'>"+rset.getString("question")+"</p>");
+         //out.println("<p class ='op'>I made it</p>");
          out.println("<div class = 'questions'>");
          out.println("<p class ='op1'>A: 20</p><p class ='op1'>B: 40</p><p class ='op1'>C: 60</p><p class ='op1'>D: 80</p>");
-         out.println("</div><form action='display' method='get'><div class='btn-contain'><button class = 'btn' name='questionNo' type='submit' value='8'>Results</button></div></form></body></html>");
-         
+         out.println("</div><form action='display' method='get'><div class='btn-contain'><button class = 'btn' name='questionNo' type='submit' value='"+rset.getInt("questionNo")+"'>Results</button></div></form></body></html>");
+         }
  
         //  // Step 3: Execute a SQL SELECT query
         //  String sqlStr = "SELECT * FROM figures WHERE code = "

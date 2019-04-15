@@ -3,13 +3,24 @@
     padding: 0;
     overflow-x: hidden;
 }
+a {
+    text-decoration: none;
+}
 
+a:visited{
+    color: #ffffff; 
+}
+
+.a-tag{
+    text-decoration: none;
+}
 
 .default{
     background-color: #212121;
 }
 
 .title-head{
+    text-decoration: none;
     text-align: center;
     font-size: 3rem;
     font-family: 'Montserrat', sans-serif;
@@ -82,3 +93,51 @@
     color: #1565c0;
 }
  
+.bg{
+    padding: 80px 300px;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100%
+}
+.btn-small{
+    font-size: 1rem
+}
+
+.bar{
+    padding: 6px 25px;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-right: 1%;
+    padding-right: 5%
+}
+.question{
+    padding: 11px 30px;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 300%
+}
+
+.comment-section{
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.comment{
+    padding: 11px 30px;
+    color: black;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200%
+}
+
+.comment-div{
+    background-color: white;
+    border-radius: 20px;
+    margin: 10px;
+}

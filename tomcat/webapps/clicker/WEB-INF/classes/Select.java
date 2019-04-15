@@ -32,9 +32,10 @@ public class Select extends HttpServlet {  // JDK 6 and above only
          // Assume that the questionNo is 8
          String username = request.getParameter("username");
          String phone = request.getParameter("phone");
+         String question = request.getParameter("questionNo");
          String choice = request.getParameter("choice");
          String comment = request.getParameter("comment");
-         String sqlStr = "INSERT INTO responses (username,phone, questionNo, choice, comment) VALUES ('"+username+"','"+phone+"', 8, '" + choice + "','"+ comment +"')";
+         String sqlStr = "INSERT INTO responses (username,phone, questionNo, choice, comment) VALUES ('"+username+"','"+phone+"', '"+question+"', '" + choice + "','"+ comment +"')";
          int count = stmt.executeUpdate(sqlStr);   // run the SQL statement
 
  
