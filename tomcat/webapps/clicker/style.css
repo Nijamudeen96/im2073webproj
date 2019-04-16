@@ -15,6 +15,10 @@ a:visited{
     text-decoration: none;
 }
 
+.main-page{
+    padding-top: 20%;
+}
+
 .default{
     background-color: #212121;
 }
@@ -57,7 +61,7 @@ a:visited{
     padding-top: 30px;
 }
 .questions{
-    padding-left: 30%;
+    padding-left: 14%;
     color: white;
     text-align: center;
     font-size: 3rem;
@@ -85,7 +89,6 @@ a:visited{
 
  .btn-contain{
      align-content: center;
-     padding-left: 41%;
      padding-top: 5%;
 }
 
@@ -140,4 +143,48 @@ a:visited{
     background-color: white;
     border-radius: 20px;
     margin: 10px;
+}
+
+.new-q {
+    padding: 7px 25px;
+    font-size: 1rem;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900; 
+}
+
+.new-q:hover{
+    color: #1565c0;
+}
+
+.new-q-btn{
+    padding: 10%;
+    margin: 0;
+    padding-top: 10%;
+}
+
+.a-tag-new{
+    color: #000000;
+}
+
+.question-box{
+    font-family: 'Montserrat', sans-serif;
+    margin: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 20%;
+}
+
+.option-box{
+    margin: 2% 10%;
+    padding: 1%;
+}
+
+.o-input{
+    margin-bottom: 8%;
+}
+
+.styler{
+    margin: 2% 0;
+    font-size: 2rem;
 }

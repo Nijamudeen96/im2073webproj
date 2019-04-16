@@ -21,6 +21,11 @@
       <servlet-class>Question</servlet-class>
    </servlet>
 
+   <servlet>
+      <servlet-name>Create</servlet-name>
+      <servlet-class>Create</servlet-class>
+   </servlet>
+
    <!-- Note: All <servlet> elements MUST be grouped together and
          placed IN FRONT of the <servlet-mapping> elements -->
  
@@ -39,4 +44,8 @@
       <url-pattern>/question</url-pattern>
    </servlet-mapping>
  
+    <servlet-mapping>
+      <servlet-name>Create</servlet-name>
+      <url-pattern>/create</url-pattern>
+   </servlet-mapping>
 </web-app>

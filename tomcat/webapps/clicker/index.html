@@ -4,17 +4,26 @@
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <link rel='stylesheet' href='style.css'>
     </header>
-    <body class="bg">
-        <h1 class='title-head'><a class='a-tag  ' href='index.html'>MENTI<span class='subscript'>v2</span></a><h1>
-        <p>Choose your question:</p>
-        <form action='question' method='get'>
+    <body class='bg'>
+        <div class ='main-page'>
+            <h1 class='title-head'><a class='a-tag  ' href='index.html'>MENTI<span class='subscript'>v2</span></a></h1>
             
-                <select class = bar name='questionNo' size ='1'>
-                    <option value='1'>What is yr age?</option>
-                    <option value='8'>What is yr IQ?</option>
-                  </select>
-           
-              <input class='btn btn-small' type='submit' value='SEARCH' />
-        </form>
+            <p class='styler'>Choose your question:</p>
+            <form action='question' method='get'>
+                
+                    <select class = bar name='questionNo' size ='1'>
+                        <option value='1'>What is yr age?</option>
+                        <option value='8'>What is yr IQ?</option>
+                    </select>
+            
+                <input class='btn btn-small' type='submit' value='SEARCH' />
+            </form>
+        </div>
+        <div class='new-q-btn'>
+            <form action='create-question.html'>
+                <input class='btn btn-small' type='submit' value='ADD QUESTION' />
+            </form>
+        </div>
     </body>
 </html>
+

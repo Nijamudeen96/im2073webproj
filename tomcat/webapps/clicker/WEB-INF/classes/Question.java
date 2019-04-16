@@ -34,7 +34,7 @@ public class Question extends HttpServlet {  // JDK 6 and above only
          ResultSet rset = stmt.executeQuery(sqlStr); // Send the query to the server
 
          while(rset.next()){
-         out.println("<html><head><title>Document</title><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'><link rel='stylesheet' href='style.css'></head><body class='bg'><h1 class='title-head'><a href='index.html'>MENTI<span class='subscript'>v2</span></a><h1>");
+         out.println("<html><head><title>Document</title><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'><link rel='stylesheet' href='style.css'></head><body class='bg'><h1 class='title-head'><a href='index.html'>MENTI<span class='subscript'>v2</span></a></h1>");
          out.println("<p class ='op'>"+rset.getString("question")+"</p>");
          //out.println("<p class ='op'>I made it</p>");
          out.println("<div class = 'questions'>");
