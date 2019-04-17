@@ -46,7 +46,7 @@ public class Display extends HttpServlet {  // JDK 6 and above only
                while(rset.next()){
                   question_s = rset.getString("question");
                
-                  out.println("<html><head><title>Display</title><link rel='stylesheet' href='style.css'><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></head><body class='default'><h1 class='title-head'>MENTI<span class='subscript'>v2</span></h1>");
+                  out.println("<html><head><title>Display</title><link rel='stylesheet' href='style.css'><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></head><body class='default'><h1 class='title-head'><a href='index.html'>MENTI<span class='subscript'>v2</span></a></h1>");
                   out.println("<div class = 'question-div'><p class='question'>"+ question_s +"</p></div>");
                   out.println("<canvas id='myChart' width='80' height='30'><p>fallback</p></canvas><script src='https://cdn.jsdelivr.net/npm/chart.js@2.8.0'></script><script>");
                   out.println("var ctx = document.getElementById('myChart').getContext('2d');");

@@ -35,7 +35,7 @@ public class Question extends HttpServlet {  // JDK 6 and above only
 
          while(rset.next()){
          out.println("<html><head><title>Document</title><link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'><link rel='stylesheet' href='style.css'></head><body class='bg'><h1 class='title-head'><a href='index.html'>MENTI<span class='subscript'>v2</span></a></h1>");
-         out.println("<p class ='op'>"+rset.getString("question")+"</p>");
+         out.println("<p class ='op'>"+rset.getString("questionNo")+". "+rset.getString("question")+"</p>");
          //out.println("<p class ='op'>I made it</p>");
          out.println("<div class = 'questions'>");
          out.println("<p class ='op1'>A: 20</p><p class ='op1'>B: 40</p><p class ='op1'>C: 60</p><p class ='op1'>D: 80</p>");
